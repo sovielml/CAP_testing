@@ -4,15 +4,35 @@
   "description": "A simple CAP project.",
   "repository": "<Add your repository here>",
   "license": "UNLICENSED",
+  "type": "commonjs",
   "private": true,
   "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.6.0",
+    "@sap-cloud-sdk/resilience": "^3.6.0",
     "@sap/cds": "^7",
     "express": "^4"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^1"
+    "@cap-js/sqlite": "^1",
+    "@gradio/client": "^0.4.2"
   },
   "scripts": {
     "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "catfactapi": {
+        "kind": "rest",
+        "credentials": {
+          "url": "https://catfact.ninja"
+        }
+      },
+      "boredomapi": {
+        "kind": "rest",
+        "credentials": {
+          "url": "https://www.boredapi.com/api"
+        }
+      }
+    }
   }
 }
