@@ -1,0 +1,12 @@
+<mvc:View controllerName="browse.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Input description="Who are you?"></Input>
+            <Button text="say hello" press="onShowHello" />
+            <Text id="helloMsg" text="{path: 'say>/hello(to=\'me\')',targetType:'any'}"/>
+            <Text id="catfacttxt" text="CATFACT"></Text>
+        </content>
+    </Page>
+</mvc:View>

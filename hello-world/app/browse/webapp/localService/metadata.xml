@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="say" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <FunctionImport Name="hello" Function="say.hello"/>
+                <FunctionImport Name="talktome" Function="say.talktome"/>
+                <FunctionImport Name="catfact" Function="say.catfact"/>
+                <FunctionImport Name="boredom" Function="say.boredom"/>
+            </EntityContainer>
+            <ComplexType Name="return_say_boredom">
+                <Property Name="activity" Type="Edm.String"/>
+                <Property Name="type" Type="Edm.String"/>
+                <Property Name="participants" Type="Edm.String"/>
+                <Property Name="price" Type="Edm.String"/>
+                <Property Name="link" Type="Edm.String"/>
+            </ComplexType>
+            <Function Name="hello" IsBound="false" IsComposable="false">
+                <Parameter Name="to" Type="Edm.String"/>
+                <ReturnType Type="Edm.String"/>
+            </Function>
+            <Function Name="talktome" IsBound="false" IsComposable="false">
+                <Parameter Name="who" Type="Edm.String"/>
+                <Parameter Name="angry" Type="Edm.Boolean"/>
+                <ReturnType Type="Edm.String"/>
+            </Function>
+            <Function Name="catfact" IsBound="false" IsComposable="false">
+                <ReturnType Type="Edm.String"/>
+            </Function>
+            <Function Name="boredom" IsBound="false" IsComposable="false">
+                <ReturnType Type="Collection(say.return_say_boredom)" Nullable="false"/>
+            </Function>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

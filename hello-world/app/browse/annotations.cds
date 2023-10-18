@@ -1,0 +1,1 @@
+using say as service from '../../srv/world';
