@@ -1,3 +1,13 @@
-ID;title;stock
-1;Wuthering Heights;100
-2;Jane Eyre;500
+ID;title;stock;price;author;publisher;genre;year;pages
+1;Wuthering Heights;100;10;Emily Bronte;Penguin;Romance;1847;300
+2;Jane Eyre;500;20;Charlotte Bronte;Penguin;Romance;1847;400
+3;Agnes Grey;200;30;Anne Bronte;Penguin;Romance;1847;500
+4;The Tenant of Wildfell Hall;300;40;Anne Bronte;Penguin;Romance;1847;600
+5;Villette;400;50;Charlotte Bronte;Penguin;Romance;1847;700
+6;Shirley;600;60;Charlotte Depoint;Shark;Thriller;2007;800
+7;The Professor;700;0;Sasha Grey;Penguin;Thriller;2075;900 
+8;Emma;800;100;Jane Austen;Penguin;Romance;1815;1000
+9;Sense and Sensibility;900;200;Jane Austen;Libra;Horror;1811;1100
+10;Pride and Prejudice;1000;300;Jane Austen;Penguin;Romance;1813;1200
+11;Mansfield Park;1100;400;Jane Austen;Libra;Romance;1814;100
+12;Northanger Abbey;1200;500;Jane Austen;Shark;Horror;1818;200
